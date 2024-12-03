@@ -6,7 +6,7 @@ import plotly.express as px
 
 
 def load_data():
-    data = pickle.load(open(r'C:\Users\Mubashir Zia\Desktop\streamlit_work\data.pkl',"rb"))
+    data = pickle.load(open('data.pkl',"rb"))
     return data
 
 data = load_data()
@@ -45,8 +45,8 @@ def creat_sidebar():
     return input_dic
         
 def predictions(input_val):
-    model = pickle.load(open(r'C:\Users\Mubashir Zia\Desktop\streamlit_work\main\model.pkl',"rb"))
-    scaler = pickle.load(open(r"C:\Users\Mubashir Zia\Desktop\streamlit_work\main\scaler.pkl","rb"))
+    model = pickle.load(open('main/model.pkl',"rb"))
+    scaler = pickle.load(open('main/scaler.pkl',"rb"))
 
     input_arry = np.array(list(input_val.values())).reshape(1,-1)
     input_scaled = scaler.transform(input_arry)
