@@ -6,7 +6,7 @@ import plotly.express as px
 
 
 def load_data():
-    data = pickle.load(open('data.pkl',"rb"))
+    data = pickle.load(open('data.pkl','rb'))
     return data
 
 data = load_data()
@@ -45,8 +45,8 @@ def creat_sidebar():
     return input_dic
         
 def predictions(input_val):
-    model = pickle.load(open('main/model.pkl',"rb"))
-    scaler = pickle.load(open('main/scaler.pkl',"rb"))
+    model = pickle.load(open('model.pkl','rb'))
+    scaler = pickle.load(open('scaler.pkl','rb'))
 
     input_arry = np.array(list(input_val.values())).reshape(1,-1)
     input_scaled = scaler.transform(input_arry)
@@ -66,7 +66,7 @@ def predictions(input_val):
     st.write("This app can assist medical professionals in making a diagnosis, but should not be used as a substitute for a professional diagnosis.")
 
 def creat_graph(input_val):
-    scaler = pickle.load(open(r"C:\Users\Mubashir Zia\Desktop\streamlit_work\main\scaler.pkl","rb"))
+    scaler = pickle.load(open('scaler.pkl','rb'))
 
     input_arry_val = np.array(list(input_val.values())).reshape(1,-1)
     x = scaler.transform(input_arry_val)
