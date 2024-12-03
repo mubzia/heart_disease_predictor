@@ -1,0 +1,20 @@
+.st-emotion-cache-j5r0tf{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #add8e6;
+}
+
+.diagnosis {
+    color: #fff;
+
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.diagnosis.normal{
+    background-color: green;
+}
+
+.diagnosis.patient{
+    background-color: red;
+}
