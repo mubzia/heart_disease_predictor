@@ -107,7 +107,7 @@ def main():
         
     input_val= creat_sidebar()
 
-    with open(r"C:\Users\Mubashir Zia\Desktop\streamlit_work\app\style.css") as f:
+    with open('style.css') as f:
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
     with st.container():
